@@ -1,0 +1,3 @@
+- move styles.css, systemjs.config.js, tsconfig.json into a public folder and set static path in server.js
+- extract google api from main component into a separate component
+- write observable to listen for get requests and hook it up with angular page
