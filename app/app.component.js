@@ -21,11 +21,11 @@ var AppComponent = (function () {
     AppComponent.prototype.ngOnInit = function () {
     };
     AppComponent.prototype.latestCoordinate = function (val) {
-        return { lat: val[val.length - 1].latitude, lng: val[val.length - 1].longitude };
+        return { lat: Number(val[val.length - 1].latitude), lng: Number(val[val.length - 1].longitude) };
     };
     AppComponent.prototype.allCoordinates = function (val) {
         var _this = this;
-        val.forEach(function (element) { return _this.coordinateCollection.push({ lat: element.latitude, lng: element.longitude }); });
+        val.forEach(function (element) { return _this.coordinateCollection.push({ lat: Number(element.latitude), lng: Number(element.longitude) }); });
         return this.coordinateCollection;
     };
     AppComponent.prototype.updateMap = function (googleMapCoordinates, polylineCoordinates) {

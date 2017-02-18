@@ -20,11 +20,11 @@ export class AppComponent implements OnInit {
   }
   
   latestCoordinate(val) {
-    return {lat: val[val.length-1].latitude, lng: val[val.length-1].longitude};
+    return {lat: Number(val[val.length-1].latitude), lng: Number(val[val.length-1].longitude)};
   }
   
   allCoordinates(val) {
-    val.forEach(element => this.coordinateCollection.push({lat: element.latitude, lng: element.longitude}));
+    val.forEach(element => this.coordinateCollection.push({lat: Number(element.latitude), lng: Number(element.longitude)}));
     return this.coordinateCollection;
   }
 

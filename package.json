@@ -2,7 +2,7 @@
   "name": "geodatapp",
   "version": "1.0.0",
   "scripts": {
-    "start": "tsc && concurrently \"tsc -w\" \"lite-server\" ",
+    "start": "node server.js",
     "lite": "lite-server",
     "tsc": "tsc",
     "tsc:w": "tsc -w"
